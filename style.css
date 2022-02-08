@@ -1,0 +1,126 @@
+/* Start General Rules */
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  --webkit-box-sizing: border-box;
+  --ms-box-sizing: border-box;
+  --o-box-sizing: border-box;
+  --moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+}
+/* End General Rules */
+
+/* Start the sections styling */
+.wrapper {
+  height: 90vh;
+  width: 90%;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: var(--white);
+  background-image: url(images/bg-pattern-top-desktop.svg),
+    url(images/bg-pattern-bottom-mobile.svg);
+  background-position: right 30vw bottom 50vh, left 30vw top 50vh;
+  background-repeat: no-repeat, no-repeat;
+}
+.first-cont {
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.first-cont h1 {
+  width: 500px;
+  font-size: xxx-large;
+  line-height: 1;
+  color: var(--very-dark-magenta);
+}
+.first-cont p {
+  font-size: x-small;
+  margin: 10px 0 10px 0;
+  font-weight: 300;
+  color: darkgray;
+}
+.reviews {
+  grid-area: 1 / 2 / 2 / 3;
+  margin-top: 30px;
+}
+.reviews .review {
+  width: 90%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-magenta);
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+.reviews .review .rev-icons {
+  color: goldenrod;
+}
+.reviews .review p {
+  margin-left: 20px;
+  font-size: x-small;
+  font-weight: 700;
+}
+.buyers {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.buyers {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin-top: 30px;
+}
+.buyers .buyer {
+  height: 35vh;
+  width: 30%;
+  background-color: var(--very-dark-magenta);
+  color: var(--white);
+  font-size: small;
+  border-radius: 20px;
+  padding: 10px;
+}
+.buyers .buyer-two {
+  margin-top: 25px;
+}
+.buyers .buyer-three {
+  margin-top: 50px;
+}
+.buyers .buyer .buyer-bio {
+  height: 60%;
+  font-size: smaller;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head {
+  display: flex;
+  margin: 20px 0;
+}
+.buyers .head img {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 50px;
+}
+.head .head-text p {
+  color: var(--soft-pink);
+}
+/* End the sections styling */
