@@ -22,15 +22,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: beige;
+  font-family: "Spartan", sans-serif;
 }
 /* End General Rules */
 
 /* Start the sections styling */
 .wrapper {
-  height: 90vh;
-  width: 90%;
-  padding: 50px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .container {
+  height: 80vh;
+  width: 80%;
+  padding: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -39,6 +46,8 @@ body {
     url(images/bg-pattern-bottom-mobile.svg);
   background-position: right 30vw bottom 50vh, left 30vw top 50vh;
   background-repeat: no-repeat, no-repeat;
+  box-shadow: 0.5px 0.5px 18px 0px #00000054;
+  border-radius: 20px;
 }
 .first-cont {
   grid-area: 1 / 1 / 2 / 2;
@@ -63,7 +72,7 @@ body {
   margin-top: 30px;
 }
 .reviews .review {
-  width: 90%;
+  width: 80%;
   height: 7vh;
   display: flex;
   justify-content: center;
@@ -71,6 +80,12 @@ body {
   background-color: var(--light-grayish-magenta);
   margin-bottom: 10px;
   border-radius: 15px;
+}
+.reviews .review-two {
+  margin-left: 25px;
+}
+.reviews .review-three {
+  margin-left: 50px;
 }
 .reviews .review .rev-icons {
   color: goldenrod;
@@ -90,7 +105,7 @@ body {
   margin-top: 30px;
 }
 .buyers .buyer {
-  height: 35vh;
+  height: 28vh;
   width: 30%;
   background-color: var(--very-dark-magenta);
   color: var(--white);
@@ -106,14 +121,15 @@ body {
 }
 .buyers .buyer .buyer-bio {
   height: 60%;
-  font-size: smaller;
+  font-size: x-small;
+  letter-spacing: -0.5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .head {
   display: flex;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .buyers .head img {
   border-radius: 50%;
