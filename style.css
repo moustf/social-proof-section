@@ -28,16 +28,16 @@ body {
 
 /* Start the sections styling */
 .wrapper {
-  width: 80%;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .wrapper .container {
-  height: 80vh;
-  width: 80%;
-  padding: 15px;
+  height: 100vh;
+  width: 100%;
+  padding: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -46,8 +46,7 @@ body {
     url(images/bg-pattern-bottom-mobile.svg);
   background-position: right 30vw bottom 50vh, left 30vw top 50vh;
   background-repeat: no-repeat, no-repeat;
-  box-shadow: 0.5px 0.5px 18px 0px #00000054;
-  border-radius: 20px;
+  /* box-shadow: 0.5px 0.5px 18px 0px #00000054; */
 }
 .first-cont {
   grid-area: 1 / 1 / 2 / 2;
@@ -62,24 +61,24 @@ body {
   color: var(--very-dark-magenta);
 }
 .first-cont p {
-  font-size: x-small;
+  max-width: 500px;
+  font-size: larger;
   margin: 10px 0 10px 0;
-  font-weight: 300;
-  color: darkgray;
+  color: rgb(139, 139, 139);
 }
 .reviews {
   grid-area: 1 / 2 / 2 / 3;
   margin-top: 30px;
 }
 .reviews .review {
-  width: 90%;
+  width: 60%;
   height: 7vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--light-grayish-magenta);
   margin-bottom: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .reviews .review-two {
   margin-left: 25px;
@@ -92,40 +91,46 @@ body {
 }
 .reviews .review p {
   margin-left: 20px;
-  font-size: x-small;
+  font-size: small;
   font-weight: 700;
+  color: var(--very-dark-magenta);
 }
 .buyers {
   grid-area: 2 / 1 / 3 / 3;
 }
 .buyers {
+  width: 90%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 20px;
   margin-top: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .buyers .buyer {
-  height: 28vh;
-  width: 30%;
+  height: 35vh;
+  width: 32%;
   background-color: var(--very-dark-magenta);
   color: var(--white);
   font-size: small;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 2rem;
 }
 .buyers .buyer-two {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .buyers .buyer-three {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .buyers .buyer .buyer-bio {
   height: 60%;
-  font-size: x-small;
+  font-size: medium;
   letter-spacing: -0.5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.8;
 }
 .head {
   display: flex;
@@ -142,17 +147,15 @@ body {
 /* End the sections styling */
 
 /* Start Responsive Mobile */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 425px) {
   .wrapper {
-    width: 88%;
+    width: 85%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
   }
   .wrapper .container {
     height: 100vh;
     width: 100%;
-    padding:40px 15px;
+    padding: 40px 15px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     background-color: var(--white);
@@ -161,7 +164,7 @@ body {
     background-position: right 30vw bottom 0vh, left 30vw top 0vh;
     background-repeat: no-repeat, no-repeat;
     box-shadow: none;
-    border-radius: 20px;
+    gap: 1rem;
   }
   .first-cont {
     grid-area: 1 / 1 / 2 / 2;
@@ -171,9 +174,11 @@ body {
     width: 300px;
     font-size: xx-large;
     color: var(--very-dark-magenta);
+    margin-bottom: 0.5rem;
   }
   .first-cont p {
     margin: 20px 0 10px 0;
+    font-size: medium;
   }
   .reviews {
     grid-area: 2 / 1 / 3 / 2;
@@ -202,13 +207,14 @@ body {
   }
   .reviews .review p {
     margin-left: 0;
-    font-size: x-small;
+    font-size: small;
     font-weight: 700;
   }
   .buyers {
     grid-area: 3 / 1 / 4 / 2;
   }
   .buyers {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -225,6 +231,9 @@ body {
   .buyers .buyer-three {
     margin-top: 0px;
     margin-bottom: 30px;
+  }
+  .buyers .buyer .buyer-bio {
+    font-size: small;
   }
 }
 /* End Responsive Mobile */
